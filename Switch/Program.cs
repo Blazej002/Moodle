@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Switch;
 
@@ -6,29 +7,45 @@ internal class Program
 {
     private static void Main(string[] args)
     {
+        Loops_oppg();
+        Console.WriteLine("___________________");
+        Console.WriteLine("___________________");
+        Switch_oppg();
+    }
+
+    private static void Loops_oppg()
+    {
         Console.WriteLine("Oppgave 1");
         for (int i = 0; i < 5; i++)
         {
             Console.WriteLine("Terje er kul!");
         }
+
         Console.WriteLine("_____________");
         Console.WriteLine("Oppgave 2");
 
         string word = "Blazej";
-        foreach (char letter  in word)
+        foreach (char letter in word)
         {
             Console.WriteLine(letter);
         }
+
         Console.WriteLine("_____________");
         Console.WriteLine("Oppgave 3");
-
-
-
+        int x = 0;
+        while (x < 10)
+        {
+            Console.WriteLine($"Rounde {x + 1} -- x = {x}");
+            x++;
+        }
     }
 
     private static void Switch_oppg()
     {
+        Console.WriteLine("Switch oppgaver 1 og 2");
+        Console.WriteLine("___________________");
         bool win = false;
+        Console.WriteLine("Write 'e' or 'exit' to exit the while loop");
         Console.WriteLine("Choose num between 1 and 7");
         while (!win)
         {
